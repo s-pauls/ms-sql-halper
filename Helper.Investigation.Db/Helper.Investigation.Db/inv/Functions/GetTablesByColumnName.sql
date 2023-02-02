@@ -26,7 +26,7 @@ BEGIN
 	JOIN
 		sys.schemas s ON s.schema_id = t.schema_id
 	JOIN 
-		sys.types tp ON tp.system_type_id = c.system_type_id
+		sys.types tp ON tp.user_type_id  = c.user_type_id
 	WHERE 
 		c.name = @column_name
 
